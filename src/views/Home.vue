@@ -1,18 +1,45 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="header">
+      <img alt="Vue logo" src="../assets/vue-logo.png" />
+      <img alt="Jest logo" src="../assets/jest-logo.png" />
+    </div>
+    <ClickEvent />
+    <ValidationForm />
+    <Data />
+    <PropsData text="Hola!" />
+    <Axios />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import ClickEvent from "@/components/ClickEvent.vue";
+import ValidationForm from "@/components/ValidationForm.vue";
+import Data from "@/components/Data.vue";
+import PropsData from "@/components/PropsData.vue";
+import Axios from "@/components/Axios.vue";
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
-    HelloWorld
-  }
-}
+    ClickEvent,
+    ValidationForm,
+    Data,
+    PropsData,
+    Axios,
+  },
+};
 </script>
+
+<style scoped>
+img {
+  width: 200px;
+  height: 200px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+</style>
